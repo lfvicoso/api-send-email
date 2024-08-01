@@ -1,0 +1,35 @@
+
+swagger: "2.0"
+info:
+  description: "API for sending emails"
+  version: "1.0.0"
+  title: "Email Service API"
+paths:
+  /send-email:
+    post:
+      summary: "Send an email"
+      description: "Send an email with the specified subject and body"
+      parameters:
+        - in: "body"
+          name: "body"
+          description: "Email details"
+          required: true
+          schema:
+            type: "object"
+            properties:
+              to:
+                type: "string"
+                example: "destinatario@example.com"
+              subject:
+                type: "string"
+                example: "Assunto do E-mail"
+              body:
+                type: "string"
+                example: "Conteúdo do E-mail"
+      responses:
+        200:
+          description: "Email sent successfully"
+        400:
+          description: "Missing required fields"
+        500:
+          description: "Internal server error"
