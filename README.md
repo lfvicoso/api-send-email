@@ -2,22 +2,6 @@
 
 Este é um microserviço simples para envio de e-mails utilizando uma API RESTful. O serviço foi desenvolvido em Python utilizando Flask e permite enviar e-mails através de uma rota HTTP POST.
 
-## Estrutura do Projeto
-
-email_service/
-├── app.py
-├── config.py
-├── controllers/
-│   └── email_controller.py
-├── services/
-│   └── email_service.py
-├── routes/
-│   └── email_route.py
-├── tests/
-│   └── test_email.py
-├── requirements.txt
-└── swagger.yaml
-
 ## Requisitos
 
 - Python 3.12 ou superior
@@ -39,8 +23,11 @@ email_service/
    Crie um arquivo `.env` na raiz do projeto com as seguintes variáveis:
 
    EMAIL_HOST=smtp.example.com
+   
    EMAIL_PORT=587
+   
    EMAIL_HOST_USER=your_email@example.com
+   
    EMAIL_HOST_PASSWORD=your_password
 
    **Observação:** Use senhas específicas de aplicativo para contas com verificação em duas etapas ativada, caso vá usar GMAIL.
